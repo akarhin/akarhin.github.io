@@ -101,17 +101,48 @@
       "summary": "GPA 4.5/5.0. Master's thesis: Synthesising Rotating Machine Faults into Vibration Data with Generative Adversarial Networks, grade 5/5."
     }
   ],
-  "certificates": [],
-  "publications": [],
-  "skills": [
+  "certificates": [
     {
-      "name": "Deep Learning and Vibration Analysis",
-      "level": "",
-      "icon": "",
-      "keywords": [
-        "Application of deep learning techniques to analyze and synthesize vibration data.",
-        "Research on fault detection in rotating machinery using deep learning and machine learning."
+      "name": "Duke University MLOps | Machine Learning Operations",
+      "provider": "Coursera",
+      "details": [
+        {
+          "title": "Python Essentials for MLOps",
+          "keywords": [
+            "Python basics for data analysis and MLOps.",
+            "Implementing Python scripts for automation in MLOps workflows.",
+            "Utilizing Python libraries such as NumPy, pandas, and scikit-learn for machine learning tasks."
+      
+        },
+        {
+          "title": "DevOps, DataOps, MLOps",
+          "keywords": [
+            "Integration of development (DevOps) and data management (DataOps) practices with machine learning operations (MLOps).",
+            "Implementing and managing continuous integration and continuous deployment (CI/CD) pipelines for ML models.",
+            "Ensuring collaboration and efficiency between data scientists, engineers, and IT operations."
+          ]
+        },
+        {
+          "title": "MLOps Platforms: Amazon SageMaker and Azure",
+          "keywords": [
+            "Utilizing Amazon SageMaker and Microsoft Azure for developing, training, and deploying ML models.",
+            "Implementing scalable machine learning workflows on cloud platforms.",
+            "Managing model versioning, deployment, and monitoring using cloud services."
+          ]
+        },
+        {
+          "title": "MLOps Tools: MLflow and Hugging Face",
+          "keywords": [
+            "Using MLflow for tracking experiments and managing ML models.",
+            "Leveraging Hugging Face for working with pre-trained models and NLP tasks.",
+            "Integrating MLflow and Hugging Face into MLOps pipelines for efficient model deployment and monitoring."
+          ]
+
+          ]
+        }
       ]
+    }
+  ],
     },
     {
       "name": "Mechatronics and Mechanical Engineering",
