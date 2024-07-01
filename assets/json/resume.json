@@ -137,14 +137,10 @@
             "Integrating MLflow and Hugging Face into MLOps pipelines for efficient model deployment and monitoring."
           ]
           }
-      ]
-
-          ]
+         ]
         }
-      ]
-    }
-  ],
-    },
+      ],
+
     {
       "name": "Mechatronics and Mechanical Engineering",
       "level": "",
