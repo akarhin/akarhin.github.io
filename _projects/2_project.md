@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Machine-to-Machine communication with industrial equipment
+title: m2m communication 
 description: Implementation of machine-to-machine communication through an AGV.
 img: assets/img/m2m.jpg
 importance: 2
