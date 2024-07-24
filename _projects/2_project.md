@@ -1,81 +1,25 @@
 ---
 layout: page
-title: project 2
-description: a project with a background image and giscus comments
-img: assets/img/3.jpg
+title: Machine-to-Machine communication with industrial equipment
+description: Implementation of machine-to-machine communication through an AGV.
+img: assets/img/m2m.jpg
 importance: 2
 category: work
 giscus_comments: true
 ---
 
-Every project has a beautiful feature showcase page.
-It's easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.
+This project explores the implementation of Machine-to-Machine (M2M) communication in industrial settings, focusing on the integration of Automated Guided Vehicles (AGVs) with non-integrated industrial equipment such as cranes. By employing a three-wheel differential drive mobile robot equipped with 3D-lidar and ultra-wideband radio signal systems for navigation and localization, the AGV demonstrates effective M2M communication capabilities. The results highlight the potential of AGVs to autonomously collaborate with various industrial machines, enhancing automation and operational efficiency.
 
-To give your project a background in the portfolio page, just add the img tag to the front matter like so:
+## Introduction:
+Industrial environments often face challenges in coordinating multiple machines due to limited space and scheduling constraints, leading to downtime and inefficiencies. M2M communication technology aims to facilitate autonomous interaction among smart devices, improving cost efficiency and time management without extensive integration efforts. AGVs, as mobile robots, offer a solution by autonomously transporting goods and utilizing sensor data for efficient navigation and task execution.
 
-    ---
-    layout: page
-    title: project
-    description: a project with a background image
-    img: /assets/img/12.jpg
-    ---
+## Methods:
+The case study involved a three-wheel differential drive AGV communicating with an overhead crane and an ultra-wideband radio signal system. The AGV used a 3D-lidar for navigation, and real-time measurements were integrated with a pre-measured point cloud map for accurate localization. Communication was established via HTTP requests and WebSocket protocols, enabling the AGV to interact with the crane for precise load positioning and maintaining a safety zone within the crane's operating area.
 
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/3.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
-</div>
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    This image can also have a caption. It's like magic.
-</div>
+## Results:
+The AGV successfully demonstrated M2M communication by accurately receiving the crane's hook position and initiating a safety zone. The reaction speed of the safety zone varied based on the placement of personnel tags, with mean reaction times of 12.92 seconds (waist) and 19.38 seconds (neck). The localization accuracy was within acceptable industrial ranges, validating the AGV's navigation capabilities.
 
-You can also put regular text between your rows of images.
-Say you wanted to write a little bit about your project before you posted the rest of the images.
-You describe how you toiled, sweated, _bled_ for your project, and then... you reveal its glory in the next row of images.
+## Discussion:
+The study confirms the feasibility of using AGVs for M2M communication with industrial equipment, presenting a flexible solution for automation tasks. Future research directions include optimizing route efficiency, material flow processes, and simplifying M2M communication integration to enhance the overall performance and ease of implementation in industrial settings.
 
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    You can also have artistically styled 2/3 + 1/3 images, like these.
-</div>
 
-The code is simple.
-Just wrap your images with `<div class="col-sm">` and place them inside `<div class="row">` (read more about the <a href="https://getbootstrap.com/docs/4.4/layout/grid/">Bootstrap Grid</a> system).
-To make images responsive, add `img-fluid` class to each; for rounded corners and shadows use `rounded` and `z-depth-1` classes.
-Here's the code for the last row of images above:
-
-{% raw %}
-
-```html
-<div class="row justify-content-sm-center">
-  <div class="col-sm-8 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-  <div class="col-sm-4 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-</div>
-```
-
-{% endraw %}
