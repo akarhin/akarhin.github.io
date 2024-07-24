@@ -1,9 +1,8 @@
 ---
 layout: page
-title: project 3
-description: a project that redirects to another website
+title: Lane Detection
+description: A data private approach to lane detection models utilizing federated learning.
 img: assets/img/7.jpg
-redirect: https://unsplash.com
 importance: 3
 category: work
 ---
