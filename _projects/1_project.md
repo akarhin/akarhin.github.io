@@ -129,7 +129,7 @@ Both models performed perfectly on preprocessed data, achieving a test accuracy 
 ## Conclusion
 This project successfully demonstrated the potential of ML models in mechanical engineering diagnostics. It functions as a good starting point for any mechanical engineering student who is interested in 
 
-The project code is available to download as a .pdf file: [PDF file](assets/pdf/gearbox_fault_diagnosis.pdf).
+The project code is available to download as a .pdf file: [PDF file](../assets/pdf/gearbox_fault_diagnosis.pdf).
 
 ## References
 Kaggle Dataset: https://www.kaggle.com/brjapon/gearbox-fault-diagnosis?select=Healthy 
