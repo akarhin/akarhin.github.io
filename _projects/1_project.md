@@ -4,7 +4,7 @@ title: Gearbox fault diagnosis
 description: Short IFD project done on a publicly available dataset.
 img: assets/img/gearbox.jpg
 importance: 1
-category: work
+category: fun
 related_publications: false
 ---
 
@@ -62,13 +62,13 @@ where:
 
 ### Summary Table
 
-| Fault Frequency | Formula                                         | Description                                  |
+| Fault Frequency       | Formula                                         | Description                                  |
 |-----------------|-------------------------------------------------|----------------------------------------------|
-| GMF             | $$ N \times f_s $$                              | Frequency of gear teeth meshing              |
-| Sidebands       | $$ \text{GMF} \pm k \times f_s $$               | Frequencies around GMF due to modulation effects |
-| Harmonics       | $$ m \times \text{GMF} $$                       | Integer multiples of the GMF                 |
+| GMF                   | $$ N \times f_s $$                              | Frequency of gear teeth meshing              |
+| Sidebands             | $$ \text{GMF} \pm k \times f_s $$               | Frequencies around GMF due to modulation effects |
+| Harmonics             | $$ m \times \text{GMF} $$                       | Integer multiples of the GMF                 |
 
-
+\n
 While traditional CM is effective, it is not very scalable, requiring more well educated data analysts for accurate diagnostics. Therefore, the field of intelligent fault diagnosis (IFD) aims to automate CM with ML and DL solutions. The field has gained a lot of traction and many articles are published aiming to improve their use.
 
 ## Methodology
@@ -79,11 +79,17 @@ Sourced from Kaggle, the dataset includes vibration data from four accelerometer
 
 Data points were segmented into windows and labeled. Fast Fourier Transform (FFT) was applied to reduce noise and enhance signal features. Data was split into training (70%) and test (30%) sets.
 
-## Model implementations
+## ML models
+A short introduction to the utilized ML models and how they were implemented.
 
 ### MLP:
+A Multilayer Perceptron (MLP) is a type of artificial neural network used primarily for supervised learning tasks like classification and regression. The structure of an MLP consists of an input layer, one or more hidden layers, and an output layer. Each layer is composed of neurons, where each neuron in one layer is connected to every neuron in the next layer, forming a fully connected network.
 
-Utilized scikit-learn's MLPClassifier with logistic loss and hyperbolic tan activation functions. MLP was chosen for its capability to handle nonlinear relationships in time-series data. The utilized activation function was the Tanh.
+In an MLP, the input layer receives the raw data, which is then processed through the hidden layers. These hidden layers are responsible for learning and extracting features from the data through weighted connections and activation functions, which introduce non-linearity into the model, enabling it to learn complex patterns.
+
+The output layer produces the final prediction, which can be a single value in the case of regression tasks or a probability distribution over different classes for classification tasks. The learning process involves adjusting the weights of the connections through a method called backpropagation, which uses the gradient of a loss function to minimize the error between the predicted and actual outputs.
+
+This project utilized scikit-learn's MLPClassifier with logistic loss and hyperbolic tan activation functions. MLP was chosen for its capability to handle nonlinear relationships in time-series data. The utilized activation function was the Tanh.
 
 $$\text{Tanh}(x) = \frac{e^x - e^{-x}}{e^x + e^{-x}}$$
 
@@ -98,14 +104,32 @@ $$
 $$
 
 ### SVM:
+A Support Vector Machine (SVM) is a supervised learning algorithm used primarily for classification and regression tasks. The main goal of an SVM is to find the optimal hyperplane that best separates the data points of different classes in a high-dimensional space.
 
-Implemented using scikit-learn's SVC with a sigmoid kernel function. Kernel SVM was selected for its ability to construct high-dimensional features and separate data points non-linearly.
+In the case of classification, an SVM constructs a hyperplane or set of hyperplanes in a high-dimensional space. These hyperplanes are chosen to maximize the margin between different classes, which is the distance between the hyperplane and the nearest data points from any class, known as support vectors. By maximizing this margin, the SVM aims to improve the model's ability to generalize to unseen data.
+
+For linearly separable data, a linear hyperplane is sufficient. However, for non-linearly separable data, SVMs use a technique called the kernel trick. The kernel trick involves transforming the original data into a higher-dimensional space where a linear separator can be found. Common kernels include the polynomial kernel, radial basis function (RBF) kernel, and sigmoid kernel.
+
+This project implemented the SVM using scikit-learn's SVC with a sigmoid kernel function. Kernel SVM was selected for its ability to construct high-dimensional features and separate data points non-linearly. Sigmoid can be represented as:
+
+$$ S(x) = \frac{e^x}{e^x + 1} $$
+
+The used loss function for the SVM was the Hinge loss:
+
+
+$$
+\text{Loss}((x, y), h) := \max\left(0, 1 - y \cdot h(x)\right) + \lambda \|w\|
+$$
+
+
 
 ## Results
 Both models performed perfectly on preprocessed data, achieving a test accuracy of 1.00 and perfect cross-validation scores. However, when evaluated on raw data, SVM outperformed MLP with a test accuracy of 0.4417 and validation accuracy of 0.59, compared to MLP's test accuracy of 0.3917 and validation accuracy of 0.54. Despite this, both models' raw data performance was below random guessing, indicating room for improvement.
 
 ## Conclusion
-This project successfully demonstrated the potential of ML models in mechanical engineering diagnostics. While both models showed high accuracy on preprocessed data, SVM proved more effective on raw data, highlighting its robustness. Future work should include more comprehensive evaluations, such as training speed and memory usage, as well as hyperparameter tuning to enhance model performance.
+This project successfully demonstrated the potential of ML models in mechanical engineering diagnostics. It functions as a good starting point for any mechanical engineering student who is interested in 
+
+The project code is available to download as a .pdf file. 
 
 ## References
 Kaggle Dataset: https://www.kaggle.com/brjapon/gearbox-fault-diagnosis?select=Healthy 
