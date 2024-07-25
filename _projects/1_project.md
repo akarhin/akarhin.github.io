@@ -62,7 +62,7 @@ where:
 
 ### Summary Table
 
-| Fault Frequency       | Formula                                         | Description                                  |
+| Frequency       | Formula                                         | Description                                  |
 |-----------------|-------------------------------------------------|----------------------------------------------|
 | GMF                   | $$ N \times f_s $$                              | Frequency of gear teeth meshing              |
 | Sidebands             | $$ \text{GMF} \pm k \times f_s $$               | Frequencies around GMF due to modulation effects |
