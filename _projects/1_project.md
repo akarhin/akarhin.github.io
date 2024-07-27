@@ -16,15 +16,22 @@ related_publications: false
 
 ## Introduction
 
-This project explores the application of Machine Learning (ML) for gearbox fault diagnosis. The goal was to develop intelligent models that can accurately determine whether a gearbox is healthy or faulty based on vibration data from accelerometers. The comparison focuses on two traditional ML models: the Support Vector Machine (SVM) and the Multilayer Perceptron (MLP). The primary focus was to conduct a quick experiment on a public dataset in the field of fault diagnosis.
+In many industrial processes, halting machinery for inspection can lead to significant losses. Thus, a reliable ML model capable of diagnosing gearbox faults using vibration data prevents unnecessary downtimes.
 
-In many industrial processes, halting machinery for inspection can lead to significant losses. Thus, a reliable ML model capable of diagnosing gearbox faults using vibration data prevents unnecessary downtimes. The dataset comprises accelerometer readings from gearboxes under various loads, labeled as 'Healthy' or 'Broken'.
+This project explores the application of Machine Learning (ML) for gearbox fault diagnosis. The goal was to develop intelligent models that can accurately determine whether a gearbox is healthy or faulty based on vibration data from accelerometers. The comparison focuses on two traditional ML models: the Support Vector Machine (SVM) and the Multilayer Perceptron (MLP). 
+
 
 ## Traditional condition monitoring
 
 The monitoring of rotating machines is often conducted with vibration analysis due to its non-invasive nature compared to other monitoring methods such as lubricant analysis. Additionally, vibration analysis shows instant changes in the vibration signature when faults do occurs, facilitating fast reaction times and proper maintenacne actions. 
 
-Traditional vibration analysis is conducted with techniques such as envelope analysis. One form of envelope analysis involves taking a Hilbert transformation of the raw measurement, extracting the envelope by taking the absolute value from the analytical signal, transforming the resulting signal into the order domain (1 order = 1 x Rpm in Hz) and then calculating the power spectral density (PSD) in the order domain. From the PSD, known fault frequencies related to the rotating speed of the system can be examined to determine if a fault mode corresponding to specific fault frequencies is present. Discovering these fault frequencies forms the basis of vibration analysis techniques. Therefore, introducing common gearfault frequencies is necessary.
+Traditional vibration analysis is conducted with techniques such as time-domain analysis, frequency analysis and envelope analysis.
+
+Time-domain analysis can be conducted by directly comparing exctracted vibration signatures from a healthy and a faulty machine. Other forms of time-domain analysis include calculating features, such as the Root-mean square (RMS) value from the vibration signature and doing a similar comparison. By comparing their RMS values, one can determine which signal has greater overall energy or intensity, higher energy in similar operating conditions often signaling faulty behaviour. Features like this can be useful for the automation of CM systems, since raw time-domain analysis requires more finesse compared to the comparison of singular numerical features.
+
+Frequency-domain analysis transforms the vibration signature into frequency domain with a transformation operation such as the Fourier transform. One of the main reasons for using a frequency-domain representations is to simplify the processed signal into its frequency components, reducing the noise present in the signature. For rotating machinery, specific faults present themself in specific fault frequencies further elaborated below. Frequency representation makes finding these specific frequencies easier compared to time-domain analysis. 
+
+Some faults are strongly present in the harmonic frequencies, or integer multiples of specific fault frequencies. Envelope analysis aims to examine the high frequency components present in the vibration signature. One form of envelope analysis involves taking a Hilbert transformation of the raw measurement, extracting the envelope by taking the absolute value from the analytical signal, transforming the resulting signal into the order domain (1 order = 1 x Rpm in Hz) and then calculating the power spectral density (PSD) in the order domain. From the PSD, known fault frequencies related to the rotating speed of the system can be examined to determine if a fault mode corresponding to specific fault frequencies is present. 
 
 The main characteristic fault frequencies in gears include the Gear mesh frequency (GMF), sidebands, and harmonics.
 
@@ -68,8 +75,8 @@ where:
 | Sidebands             | $$ \text{GMF} \pm k \times f_s $$               | Frequencies around GMF due to modulation effects |
 | Harmonics             | $$ m \times \text{GMF} $$                       | Integer multiples of the GMF                 |
 
-\n
-While traditional CM is effective, it is not very scalable, requiring more well educated data analysts for accurate diagnostics. Therefore, the field of intelligent fault diagnosis (IFD) aims to automate CM with ML and DL solutions. The field has gained a lot of traction and many articles are published aiming to improve their use.
+
+While traditional CM is effective, it is not very scalable, requiring more well educated data analysts for accurate diagnosis. While the calulated features such as the RMS do alleviate this problem, reducing the vibration signature into specific features does not necessarily capture the entire distribution of faulty vibration behaviour. Therefore, the field of intelligent fault diagnosis (IFD) aims to automate CM with ML and DL solutions. The aim is to produce intelligent models that take the vibration signature or a multitude of calculated features as their input and that produce a health class as the output. The field has gained a lot of traction and many articles are published aiming to improve their use.
 
 ## Methodology
 
