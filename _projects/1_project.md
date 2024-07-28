@@ -20,6 +20,8 @@ In many industrial processes, halting machinery for inspection can lead to signi
 
 This project explores the application of Machine Learning (ML) for gearbox fault diagnosis. The goal was to develop intelligent models that can accurately determine whether a gearbox is healthy or faulty based on vibration data from accelerometers. The comparison focuses on two traditional ML models: the Support Vector Machine (SVM) and the Multilayer Perceptron (MLP). 
 
+While traditional CM is effective, it is not very scalable, requiring more well educated data analysts for accurate diagnosis. While the calulated features such as the RMS do alleviate this problem, reducing the vibration signature into specific features does not necessarily capture the entire distribution of faulty vibration behaviour. Therefore, the field of intelligent fault diagnosis (IFD) aims to automate CM with ML and DL solutions. The aim is to produce intelligent models that take the vibration signature or a multitude of calculated features as their input and that produce a health class as the output. The field has gained a lot of traction and many articles are published aiming to improve their use.
+
 
 ## Traditional condition monitoring
 
@@ -67,6 +69,23 @@ $$
 where:
 - \( m \) is an integer (1, 2, 3, ...)
 
+**Hunting thooth frequency** The hunting teeth frequency (HTF) is the rate at which a tooth in one gear engages with a specific tooth in another gear. 
+
+**Formula:**
+
+$$
+HTF = \frac{\text{GMF} \times N_a}{T_{out} \times T_{in}}
+$$
+where
+-GMF is the gear meshing frequency
+- N_a is the common frequency
+-T_in = pinion teeth
+-T_out = gear teeth
+
+The common frequency is determined by dividing the amount of theeth from both gears in the gearpair into integer multiples. For example, 24 can be divided into 1* 24, 2*12, 3*8 and 4*6. The highest number present in both of the gears integer multiples is the common frequency. For example, 12 theeth gear and the previous gear have a common frequency is 12. This is a bad design choice, since specific theeth collide in a frequency of 12 * GMF. Additionally, if we have a even gear ratio, faults in specific theeth affect specific teeth on the corresponding gear, accelerating the wear induced.
+
+
+
 ### Summary Table
 
 | Frequency       | Formula                                         | Description                                  |
@@ -76,7 +95,11 @@ where:
 | Harmonics             | $$ m \times \text{GMF} $$                       | Integer multiples of the GMF                 |
 
 
-While traditional CM is effective, it is not very scalable, requiring more well educated data analysts for accurate diagnosis. While the calulated features such as the RMS do alleviate this problem, reducing the vibration signature into specific features does not necessarily capture the entire distribution of faulty vibration behaviour. Therefore, the field of intelligent fault diagnosis (IFD) aims to automate CM with ML and DL solutions. The aim is to produce intelligent models that take the vibration signature or a multitude of calculated features as their input and that produce a health class as the output. The field has gained a lot of traction and many articles are published aiming to improve their use.
+The following section explains some common fault modes and their effect on the specific fault frequencies and the vibration signature in the frequency domain.
+
+
+
+
 
 ## Methodology
 
