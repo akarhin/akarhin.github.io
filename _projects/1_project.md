@@ -85,19 +85,37 @@ where
 The common frequency is determined by dividing the amount of theeth from both gears in the gearpair into integer multiples. For example, 24 can be divided into 1* 24, 2*12, 3*8 and 4*6. The highest number present in both of the gears integer multiples is the common frequency. For example, 12 theeth gear and the previous gear have a common frequency is 12. This is a bad design choice, since specific theeth collide in a frequency of 12 * GMF. Additionally, if we have a even gear ratio, faults in specific theeth affect specific teeth on the corresponding gear, accelerating the wear induced.
 
 
-
-### Summary Table
-
-| Frequency       | Formula                                         | Description                                  |
-|-----------------|-------------------------------------------------|----------------------------------------------|
-| GMF                   | $$ N \times f_s $$                              | Frequency of gear teeth meshing              |
-| Sidebands             | $$ \text{GMF} \pm k \times f_s $$               | Frequencies around GMF due to modulation effects |
-| Harmonics             | $$ m \times \text{GMF} $$                       | Integer multiples of the GMF                 |
-
-
 The following section explains some common fault modes and their effect on the specific fault frequencies and the vibration signature in the frequency domain.
 
+### Misalignment
+- **Symptoms:** Amplitude increase in the axial direction of the axes. Appearance of 2X, 3X RPM, and 2X, 3X GMF.
+- **Causes:** Wrong alignment procedures, loss of tolerances, thermal expansion.
 
+
+### Excessive Wear
+- **Symptoms:** Increased amplitude of the 1XGMF and 1X sidebands. Appearance of gear's natural frequency.
+- **Causes:** Improper lubrication, contaminated or degraded lubricant. Change of wear pattern. Assembly and adjustment failures.
+
+
+### Excessive Backlash
+- **Symptoms:** Increased amplitude of the 1XGMF and 1X sidebands. Appearance of gear's natural frequency.
+- **Causes:** Bad assembly, design or manufacturing flaws, wear.
+
+### Overload
+- **Symptoms:** Increased amplitude of 1XGMF, multiple 1X RPM sidebands.
+- **Causes:** Operation outside of design conditions.
+
+### High Friction
+- **Symptoms:** Increase of the 1XGMF component, rise of the global amplitude in acceleration, and shock pulse.
+- **Causes:** Lubrication failures and/or lubricant quality. Component assembly and tolerances.
+
+### Broken Teeth
+- **Symptoms:** Synchronous impact pattern in the time waveform with 1X of damaged gear.
+- **Causes:** Overload, fatigue, adjustments and tolerances.
+
+### Assembly or Manufacturing Failures
+- **Symptoms:** Increased amplitude of the 1XGMF and 1X sidebands. Appearance of Hunting Tooth Frequency (HFT) or the Gear Assembly Phase Frequency (GAPF).
+- **Causes:** Manufacturing defects in geometry and/or materials. Irregular teeth surface. Changes from the original wear pattern.
 
 
 
