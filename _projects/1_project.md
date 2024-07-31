@@ -8,11 +8,7 @@ category: fun
 related_publications: false
 ---
 
-<div class="row justify-content-sm-center">
-  <div class="col-sm-8 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/gearbox.jpg" %}
-  </div>
-</div>
+
 
 ## Introduction
 
@@ -22,6 +18,11 @@ This project explores the application of Machine Learning (ML) for gearbox fault
 
 While traditional CM is effective, it is not very scalable, requiring more well educated data analysts for accurate diagnosis. While the calulated features such as the RMS do alleviate this problem, reducing the vibration signature into specific features does not necessarily capture the entire distribution of faulty vibration behaviour. Therefore, the field of intelligent fault diagnosis (IFD) aims to automate CM with ML and DL solutions. The aim is to produce intelligent models that take the vibration signature or a multitude of calculated features as their input and that produce a health class as the output. The field has gained a lot of traction and many articles are published aiming to improve their use.
 
+<div class="row justify-content-sm-center">
+  <div class="col-sm-8 mt-3 mt-md-0">
+    {% include figure.liquid path="assets/img/gearbox.jpg" %}
+  </div>
+</div>
 
 ## Traditional condition monitoring
 
@@ -173,6 +174,19 @@ $$
 
 ## Results
 Both models performed perfectly on preprocessed data, achieving a test accuracy of 1.00 and perfect cross-validation scores. However, when evaluated on raw data, SVM outperformed MLP with a test accuracy of 0.4417 and validation accuracy of 0.59, compared to MLP's test accuracy of 0.3917 and validation accuracy of 0.54. Despite this, both models' raw data performance was below random guessing, indicating room for improvement.
+
+<div class="row justify-content-sm-center">
+  <div class="col-sm-8 mt-3 mt-md-0">
+    {% include figure.liquid path="assets/img/Confusion_matrix_mlp.jpg" %}
+  </div>
+</div>
+
+<div class="row justify-content-sm-center">
+  <div class="col-sm-8 mt-3 mt-md-0">
+    {% include figure.liquid path="assets/img/confusion_matrix_svm.jpg" %}
+  </div>
+</div>
+
 
 ## Conclusion
 This project successfully demonstrated the potential of ML models in mechanical engineering diagnostics. It functions as a good starting point for any mechanical engineering student who is interested in 
