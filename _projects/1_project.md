@@ -126,7 +126,13 @@ The following section explains some common fault modes and their effect on the s
 
 Sourced from Kaggle, the dataset includes vibration data from four accelerometers placed on gearboxes under different loads. It contains 20 files: 10 for healthy gearboxes and 10 for gearboxes with a broken tooth, each under different load conditions (0% - 90%). The four vibration sensors placed in four different direction, and under variation of load from '0' to '90' percent.
 
-Data points were segmented into windows and labeled. Fast Fourier Transform (FFT) was applied to reduce noise and enhance signal features. Data was split into training (70%) and test (30%) sets. The dataset is publicly available (you need a Kaggle account) [here]( https://www.kaggle.com/datasets/brjapon/gearbox-fault-diagnosis).
+Data points were segmented into windows and labeled. Fast Fourier Transform (FFT) was applied to reduce noise and enhance signal features. Data was split into training (70%) and test (30%) sets. The dataset is publicly available (you need a Kaggle account) [here]( https://www.kaggle.com/datasets/brjapon/gearbox-fault-diagnosis). The SpectraQuest Gearbox Prognostic Simulator test setup has been introduced [here](https://spectraquest.com/prognostics/details/gps/).
+
+<div class="row justify-content-sm-center">
+  <div class="col-sm-8 mt-3 mt-md-0">
+    {% include figure.liquid path="assets/img/spectraquest_2.jpg" %}
+  </div>
+</div>
 
 ## ML models
 A short introduction to the utilized ML models and how they were implemented.
