@@ -124,7 +124,7 @@ The following section explains some common fault modes and their effect on the s
 
 ### Dataset Description:
 
-Sourced from Kaggle, the dataset includes vibration data from four accelerometers placed on gearboxes under different loads. It contains 20 files: 10 for healthy gearboxes and 10 for gearboxes with a broken tooth, each under different load conditions (0% - 90%).
+Sourced from Kaggle, the dataset includes vibration data from four accelerometers placed on gearboxes under different loads. It contains 20 files: 10 for healthy gearboxes and 10 for gearboxes with a broken tooth, each under different load conditions (0% - 90%). The four vibration sensors placed in four different direction, and under variation of load from '0' to '90' percent.
 
 Data points were segmented into windows and labeled. Fast Fourier Transform (FFT) was applied to reduce noise and enhance signal features. Data was split into training (70%) and test (30%) sets.
 
