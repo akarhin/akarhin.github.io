@@ -83,7 +83,7 @@ where
 -T_in = pinion teeth
 -T_out = gear teeth
 
-The common frequency is determined by dividing the amount of theeth from both gears in the gearpair into integer multiples. For example, 24 can be divided into 1* 24, 2*12, 3*8 and 4*6. The highest number present in both of the gears integer multiples is the common frequency. For example, 12 theeth gear and the previous gear have a common frequency is 12. This is a bad design choice, since specific theeth collide in a frequency of 12 * GMF. Additionally, if we have a even gear ratio, faults in specific theeth affect specific teeth on the corresponding gear, accelerating the wear induced.
+The common frequency is determined by dividing the amount of theeth from both gears in the gearpair into integer multiples. For example, 24 can be divided into 1* 24, 2*12, 3*8 and 4*6. The highest number present in both of the gears integer multiples is the common frequency. For example, 12 theeth gear and the previous gear have a common frequency of 12. This is a bad design choice, since specific theeth collide in a frequency of 12 * GMF. More importantly, if we have an even gear ratio, faults in specific theeth in the pinion affect specific theeth on the corresponding gear, accelerating the wear induced in these specific gear theeth locations.
 
 
 The following section explains some common fault modes and their effect on the specific fault frequencies and the vibration signature in the frequency domain.
@@ -118,7 +118,9 @@ The following section explains some common fault modes and their effect on the s
 - **Symptoms:** Increased amplitude of the 1XGMF and 1X sidebands. Appearance of Hunting Tooth Frequency (HFT) or the Gear Assembly Phase Frequency (GAPF).
 - **Causes:** Manufacturing defects in geometry and/or materials. Irregular teeth surface. Changes from the original wear pattern.
 
+## The Nyquist frequency
 
+During the data gathering process, something called the Nyquist frequency is often discussed. The nyquist frequency corresponds to the frequency thats cycle length is half of the samplers frequency. Therefore, for example, a sampling rate of 3 kHz has a Nyquist frequency of 1.5 kHz. Conversely, a frequency of 1.5 kHz has a Nyquist rate of 3 kHz. The Nyquist rate is used to mimimize the effect of aliasing during data acquisition. It is stated that to avoid aliasing, the Nyquist rate of the phenomena monitored has to be smaller or at least equal to the sampling rate. That is, if we want to monitor high frequency phenomena, the sampling frequency has to be at least double the monitored phenomenas frequency to avoid aliasing in the signal. 
 
 ## Methodology
 
