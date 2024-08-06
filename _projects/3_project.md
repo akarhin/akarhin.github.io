@@ -27,12 +27,18 @@ First, the data acquisition framework is introduced. Second, the FL algorithms a
 
 The datasets used in this project were collected on a TurtleBot which had a Raspberry Pi camera module 2 attached. The TurtleBot was driven around the three different tracks remotely via an SSH (Secure Shell) connection from a remote Ubuntu laptop. While driving, a rosbag was created on the remote laptop, which recorded all the published messages in the ROS environment. After the recording, the images published by the camera node were exported and fed to an OpenCV algorithm based on Canny edge detection. Each datapoint consisted of the original image resampled to the size (3x96x128) (3 corresponding to the RGB values of each image) as the feature and the same image with same size, but with highlighted lanes as the label.
 
+<div class="row justify-content-sm-center">
+  <div class="col-sm-8 mt-3 mt-md-0">
+    {% include figure.liquid path="assets/img/Dataset_image.jpg" %}
+  </div>
+</div>
+
+
+
 Data was taken during operation of the TurtleBot (while moving) for added realism. Due to time and project constraints, all data was gathered with the same TurtleBot, just in separate tracks, still ensuring that the local models had no access to each other's data.
 
-## Data gathering and processing
 
-The datasets used in this project were collected on a TurtleBot which had a Raspberry Pi camera module 2 attached. The TurtleBot was driven around the three different tracks remotely via an SSH (Secure Shell) connection from a remote Ubuntu laptop. While driving, a rosbag was created on the remote laptop, which recorded all the published messages in the ROS environment. After the recording, the images published by the camera node were exported and fed to an OpenCV algorithm based on Canny edge detection. Each datapoint consisted of the original image resampled to the size (3x96x128) (3 corresponding to the RGB values of each image) as the feature and the same image with same size, but with highlighted lanes as the label. 
-Data was taken during operation of the TurtleBot (while moving) for added realism. Due to time and project constraints, all data was gathered with the same TurtleBot, just in separate tracks, still ensuring that the local models had no access to each other's data.
+
 ## Problem formulation and the chosen FL algorithms
 
 ### GTVMin
