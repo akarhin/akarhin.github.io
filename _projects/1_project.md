@@ -221,7 +221,7 @@ Both models performed perfectly on preprocessed data, achieving a test accuracy 
 
 
 ## Conclusion
-This project successfully demonstrated the potential of ML models in mechanical engineering diagnostics. It functions as a good starting point for any mechanical engineering student who is interested in intelligent fault diagnosis, or wants to learn basic ML techniques applicable to mechanical engineering problems.The project code is available to download as a .pdf file here: [PDF file](/akarhin.github.io/assets/pdf/gearbox_fault_diagnosis.pdf).
+This project successfully demonstrated the potential of ML models in mechanical engineering diagnostics. It functions as a good starting point for any mechanical engineering student who is interested in intelligent fault diagnosis, or wants to learn basic ML techniques applicable to mechanical engineering problems.The project code is available to download as a .pdf file here: [PDF file](../../assets/pdf/gearbox_fault_diagnosis.pdf).
 
 
 ## Things to improve
