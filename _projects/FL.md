@@ -40,8 +40,9 @@ Each local dataset was gathered by previously explained methods from different e
 The feature selection was self-explanatory, an image of a road segment where the lanes need to be highlighted. The dataset was notably downsampled for faster computations and ease of result repeatability. Because the model uses convolutional layers, the more detailed features from the images used are hard to pinpoint. The model used for the global and local models was a Convolutional Neural Network (CNN), which is a traditional neural network architecture used in lane detection algorithms. An identical neural network architecture between local nodes and the global model was used. The models of each node were identical in architecture, since the lane detection models take in and output a same sized image. Since the edge weights were also the same, the only difference between the local nodes were the datasets they could apply during training of the current global model. Each local model and the global model used Mean-Squared Error (MSE) as the loss function:
 
 $$
+
 \operatorname{MSE} = {\frac {1}{n}}\sum _{i=1}^{n}(Y_{i}-{\hat {Y_{i}}})^{2}
-\label{eq6:pri_reso}
+
 $$
 
 where:
