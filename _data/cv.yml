@@ -47,7 +47,7 @@
     - title: Course Assistant
       institution: Aalto University, Espoo, Uusimaa, Finland
       year: 2021-2022
-      description: Courses:
+      description: Courses
         - Thermodynamics and Heat transfer
         - Basic course on programming 1 (Python)
         - Basic course on programming 2 (Python)
@@ -57,7 +57,7 @@
   contents:
     - title: Coursera MLOps Specialization Certificate
       year: 2024
-      description: Completed the following courses:
+      description: Completed the following courses
         - Python Essentials for MLOps
         - DevOps, DataOps, MLOps
         - MLOps Platforms, Amazon SageMaker and Azure ML
