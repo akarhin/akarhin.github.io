@@ -124,6 +124,7 @@ The dataset is publicly available (you need a Kaggle account) [here]( https://ww
 <div class="row justify-content-sm-center">
   <div class="col-sm-8 mt-3 mt-md-0">
     {% include figure.liquid path="assets/img/spectraquest_2.jpg" %}
+     <figcaption style="text-align: center; margin-top: 10px;">SpectraQuest Gearbox Prognostic Simulator setup.</figcaption>
   </div>
 </div>
 
@@ -207,12 +208,14 @@ Both models performed perfectly on preprocessed data, achieving a test accuracy 
 <div class="row justify-content-sm-center">
   <div class="col-sm-8 mt-3 mt-md-0">
     {% include figure.liquid path="assets/img/Confusion_matrix_mlp.jpg" %}
+     <figcaption style="text-align: center; margin-top: 10px;">A confusion matrix results of the MLP model trained with processed data.</figcaption>
   </div>
 </div>
 
 <div class="row justify-content-sm-center">
   <div class="col-sm-8 mt-3 mt-md-0">
     {% include figure.liquid path="assets/img/confusion_matrix_svm.jpg" %}
+    <figcaption style="text-align: center; margin-top: 10px;">A confusion matrix results of the SVM model trained with processed data.</figcaption>
   </div>
 </div>
 
