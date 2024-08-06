@@ -4,7 +4,7 @@ title: Gearbox fault diagnosis
 description: An entry-level intelligent fault diagnosis project
 img: assets/img/gearbox.jpg
 importance: 1
-category: fun
+category: work
 related_publications: false
 ---
 
