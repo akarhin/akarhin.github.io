@@ -12,11 +12,11 @@ related_publications: false
 
 ## Introduction
 
-In many industrial processes, halting machinery for inspection can lead to significant losses. Thus, a reliable ML model capable of diagnosing gearbox faults using vibration data prevents unnecessary downtimes.
 
-This project explores the application of Machine Learning (ML) for gearbox fault diagnosis. The goal was to develop intelligent models that can accurately determine whether a gearbox is healthy or faulty based on vibration data from accelerometers. The comparison focuses on two traditional ML models: the Support Vector Machine (SVM) and the Multilayer Perceptron (MLP). 
+While traditional condition monitoring (CM) done by vibration analysis is effective, it is not very scalable, requiring more well educated data analysts for accurate diagnosis. While the calulated features such as the RMS do alleviate this problem, reducing the vibration signature into specific features does not necessarily capture the entire distribution of faulty vibration behaviour. Therefore, the field of intelligent fault diagnosis (IFD) aims to automate CM with machine learning (ML) solutions. The aim is to produce intelligent models that take the vibration signature or a multitude of calculated features as their input and produce a health class as the output. The field has gained a lot of traction and many articles are published aiming to improve their use.
 
-While traditional CM is effective, it is not very scalable, requiring more well educated data analysts for accurate diagnosis. While the calulated features such as the RMS do alleviate this problem, reducing the vibration signature into specific features does not necessarily capture the entire distribution of faulty vibration behaviour. Therefore, the field of intelligent fault diagnosis (IFD) aims to automate CM with ML and DL solutions. The aim is to produce intelligent models that take the vibration signature or a multitude of calculated features as their input and that produce a health class as the output. The field has gained a lot of traction and many articles are published aiming to improve their use.
+This project explores the application of Machine Learning (ML) for gearbox fault diagnosis. The goal was to develop intelligent models that can accurately determine whether a gearbox is healthy or faulty based on processed vibration data from accelerometers. The comparison focuses on two traditional ML models: the Support Vector Machine (SVM) and the Multilayer Perceptron (MLP). First, traditional CM methods are introduced for comparison. Second, the beforementioned ML models are introduced. Third, the results are shown and a superior ML model is chosen based on perceived performance. Finally, the project concludes by discussing further improvements applicable.
+
 
 <div class="row justify-content-sm-center">
   <div class="col-sm-8 mt-3 mt-md-0">
@@ -144,7 +144,7 @@ A Multilayer Perceptron (MLP) is a type of artificial neural network used primar
 
 <div class="row justify-content-sm-center">
   <div class="col-sm-8 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/mlp.pdf" %}
+    <iframe src="assets/img/mlp.pdf" width="100%" height="500px"></iframe>
     <figcaption style="text-align: center; margin-top: 10px;">A simple MLP structure.</figcaption>
   </div>
 </div>
@@ -153,8 +153,8 @@ In an MLP, the input layer receives the raw data, which is then processed throug
 
 <div class="row justify-content-sm-center">
   <div class="col-sm-8 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/Neuron.pdf" %}
-     <figcaption style="text-align: center; margin-top: 10px;">MLP neuron calculation.</figcaption>
+    <iframe src="assets/img/Neuron.pdf" width="100%" height="500px"></iframe>
+    <figcaption style="text-align: center; margin-top: 10px;">A simple MLP structure.</figcaption>
   </div>
 </div>
 
@@ -177,9 +177,21 @@ $$
 ### SVM:
 A Support Vector Machine (SVM) is a supervised learning algorithm used primarily for classification and regression tasks. The main goal of an SVM is to find the optimal hyperplane that best separates the data points of different classes in a high-dimensional space.
 
+<div class="row justify-content-sm-center">
+  <div class="col-sm-8 mt-3 mt-md-0">
+    {% include figure.liquid path="assets/img/linear_svm.jpg" %}
+  </div>
+</div>
+
 In the case of classification, an SVM constructs a hyperplane or set of hyperplanes in a high-dimensional space. These hyperplanes are chosen to maximize the margin between different classes, which is the distance between the hyperplane and the nearest data points from any class, known as support vectors. By maximizing this margin, the SVM aims to improve the model's ability to generalize to unseen data.
 
 For linearly separable data, a linear hyperplane is sufficient. However, for non-linearly separable data, SVMs use a technique called the kernel trick. The kernel trick involves transforming the original data into a higher-dimensional space where a linear separator can be found. Common kernels include the polynomial kernel, radial basis function (RBF) kernel, and sigmoid kernel.
+
+<div class="row justify-content-sm-center">
+  <div class="col-sm-8 mt-3 mt-md-0">
+    {% include figure.liquid path="assets/img/nonlinear_svm.jpg" %}
+  </div>
+</div>
 
 This project implemented the SVM using scikit-learn's SVC with a sigmoid kernel function. Kernel SVM was selected for its ability to construct high-dimensional features and separate data points non-linearly. Sigmoid can be represented as:
 
@@ -195,7 +207,7 @@ $$
 
 
 ## Results
-Both models performed perfectly on preprocessed data, achieving a test accuracy of 1.00 and perfect cross-validation scores. However, when evaluated on raw data, SVM outperformed MLP with a test accuracy of 0.4417 and validation accuracy of 0.59, compared to MLP's test accuracy of 0.3917 and validation accuracy of 0.54. Despite this, both models' raw data performance was below random guessing, indicating room for improvement.
+Both models performed perfectly on preprocessed data, achieving a test accuracy of 1.00 and perfect cross-validation scores. However, when evaluated on raw data, SVM outperformed MLP with a test accuracy of 0.4417 and validation accuracy of 0.59, compared to MLP's test accuracy of 0.3917 and validation accuracy of 0.54. Despite this, both models' raw data performance was below random guessing, highlighting the importance of data preprocessing when implementing traditional ML models for IFD. 
 
 <div class="row justify-content-sm-center">
   <div class="col-sm-8 mt-3 mt-md-0">
@@ -213,13 +225,10 @@ Both models performed perfectly on preprocessed data, achieving a test accuracy 
 ## Conclusion
 This project successfully demonstrated the potential of ML models in mechanical engineering diagnostics. It functions as a good starting point for any mechanical engineering student who is interested in 
 
-The project code is available to download as a .pdf file: [PDF file](./assets/pdf/gearbox_fault_diagnosis.pdf).
+The project code is available to download as a .pdf file: [PDF file](../assets/pdf/gearbox_fault_diagnosis.pdf).
 
-## References
-Kaggle Dataset: https://www.kaggle.com/brjapon/gearbox-fault-diagnosis?select=Healthy 
-SpectraQuest Gearbox Fault Diagnostics Simulator: https://spectraquest.com/prognostics/details/gps/
-scikit-learn Documentation: https://scikit-learn.org/stable/index.html
 
+## Things to improve
 
 
 
