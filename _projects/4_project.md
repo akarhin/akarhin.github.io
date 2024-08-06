@@ -4,7 +4,7 @@ title: fault injection with GANs
 description: 
 img: assets/img/gan_image.jpg
 importance: 1
-category: ML/DL
+category: work
 ---
 ## Introduction
 
