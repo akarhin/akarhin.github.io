@@ -2,8 +2,8 @@
 layout: page
 title: fault injection with GANs
 description: 
-img:
-importance: 3
+img: assets/img/gan_image.jpg
+importance: 1
 category: ML/DL
 ---
 ## Introduction
