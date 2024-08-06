@@ -17,6 +17,13 @@ This project focused on applying FL approaches for collaborative lane detection.
 
 First, the data acquisition framework is introduced. Second, the FL algorithms and the training scenario is introduced. Third, the results are discussed. Finally, the project concludes by discussing further improvements.
 
+<div class="row justify-content-sm-center">
+  <div class="col-sm-8 mt-3 mt-md-0">
+    {% include figure.liquid path="assets/img/FL.jpg" %}
+  </div>
+</div>
+
+
 ## Data gathering and processing
 
 The datasets used in this project were collected on a TurtleBot which had a Raspberry Pi camera module 2 attached. The TurtleBot was driven around the three different tracks remotely via an SSH (Secure Shell) connection from a remote Ubuntu laptop. While driving, a rosbag was created on the remote laptop, which recorded all the published messages in the ROS environment. After the recording, the images published by the camera node were exported and fed to an OpenCV algorithm based on Canny edge detection. Each datapoint consisted of the original image resampled to the size (3x96x128) (3 corresponding to the RGB values of each image) as the feature and the same image with same size, but with highlighted lanes as the label. 
