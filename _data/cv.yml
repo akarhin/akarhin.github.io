@@ -33,32 +33,35 @@
   contents:
     - title: Doctoral Researcher
       institution: Aalto University, Espoo, Uusimaa, Finland
-      year: May 2024 - Present
+      year: 2024->
       description:
         - Part of the ARotor laboratory in the Mechatronics research group.
         - Deep Learning and Vibration Analysis
 
     - title: Research Assistant
       institution: Aalto University, Espoo, Uusimaa, Finland
-      year: Jan 2022 - May 2024
+      year: 2022-2024
       description:
-        - Research assistant at Department of Mechanical Engineering: Mechatronics
+        - Department of Mechanical Engineering, Mechatronics research group, ARotor lab
 
     - title: Course Assistant
       institution: Aalto University, Espoo, Uusimaa, Finland
-      year: Feb 2021 - Jan 2022
-      description:
-        - Course assistant on the following courses:
-          - Thermodynamics and Heat transfer
-          - Basic course on programming 1 (Python)
-          - Basic course on programming 2 (Python)
+      year: 2021-2022
+      description: Courses:
+        - Thermodynamics and Heat transfer
+        - Basic course on programming 1 (Python)
+        - Basic course on programming 2 (Python)
 
-- title: Open Source Projects
+- title: Certificates
   type: time_table
   contents:
-    - title: <a href=placeholder href</a>
+    - title: Coursera MLOps Specialization Certificate
       year: 2024
-      description: Developed a simple ML API for research work purposes (Work in progress)
+      description: Completed the following courses:
+        - Python Essentials for MLOps
+        - DevOps, DataOps, MLOps
+        - MLOps Platforms, Amazon SageMaker and Azure ML
+        - MLOps Tools, MLflow and Hugging Face
 
 - title: Honors and Awards
   type: time_table
@@ -70,7 +73,7 @@
     - title: Graduation with Honors
       items:
         - GPA 4.5/5.0
-        - Master's thesis: Synthesising Rotating Machine Faults into Vibration Data with Generative Adversarial Networks, grade 5/5
+        - Synthesising Rotating Machine Faults into Vibration Data with Generative Adversarial Networks (Thesis), grade 5/5
         
 - title: Academic Interests
   type: nested_list
@@ -85,12 +88,8 @@
         - Research and development in the field of mechatronics, particularly within the ARotor laboratory.
         - Study of mechanical engineering principles applied to advanced mechatronic systems.
 
-    - title: Programming and Course Assistance
-      items:
-        - Instruction and assistance in programming courses, including Python.
-        - Teaching foundational courses on thermodynamics and heat transfer.
 
 - title: Other Interests
   type: list
   contents:
-    - <u>Hobbies:</u> Climbing, Running, Writing
+    - <u>Hobbies:</u> Bouldering, Running, Writing, Programming
