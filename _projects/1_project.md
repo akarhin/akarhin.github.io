@@ -142,7 +142,21 @@ A short introduction to the utilized ML models and how they were implemented.
 ### MLP:
 A Multilayer Perceptron (MLP) is a type of artificial neural network used primarily for supervised learning tasks like classification and regression. The structure of an MLP consists of an input layer, one or more hidden layers, and an output layer. Each layer is composed of neurons, where each neuron in one layer is connected to every neuron in the next layer, forming a fully connected network.
 
+<div class="row justify-content-sm-center">
+  <div class="col-sm-8 mt-3 mt-md-0">
+    {% include figure.liquid path="assets/img/mlp.pdf" %}
+    <figcaption style="text-align: center; margin-top: 10px;">A simple MLP structure.</figcaption>
+  </div>
+</div>
+
 In an MLP, the input layer receives the raw data, which is then processed through the hidden layers. These hidden layers are responsible for learning and extracting features from the data through weighted connections and activation functions, which introduce non-linearity into the model, enabling it to learn complex patterns.
+
+<div class="row justify-content-sm-center">
+  <div class="col-sm-8 mt-3 mt-md-0">
+    {% include figure.liquid path="assets/img/Neuron.pdf" %}
+     <figcaption style="text-align: center; margin-top: 10px;">MLP neuron calculation.</figcaption>
+  </div>
+</div>
 
 The output layer produces the final prediction, which can be a single value in the case of regression tasks or a probability distribution over different classes for classification tasks. The learning process involves adjusting the weights of the connections through a method called backpropagation, which uses the gradient of a loss function to minimize the error between the predicted and actual outputs.
 
