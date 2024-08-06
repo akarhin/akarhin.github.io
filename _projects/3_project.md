@@ -4,7 +4,7 @@ title: Collaborative Lane Detection with Federated Learning
 description: A data private approach to lane detection models utilizing federated learning.
 img: assets/img/FL.jpg
 importance: 2
-category: work
+category: ML/FL
 ---
 
 ## Introduction
