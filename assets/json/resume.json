@@ -111,7 +111,8 @@
           "keywords": [
             "Python basics for data analysis and MLOps.",
             "Implementing Python scripts for automation in MLOps workflows.",
-            "Utilizing Python libraries such as NumPy, pandas, and scikit-learn for machine learning tasks."]
+            "Utilizing Python libraries such as NumPy, pandas, and scikit-learn for machine learning tasks."
+          ]
         },
         {
           "title": "DevOps, DataOps, MLOps",
@@ -136,11 +137,9 @@
             "Leveraging Hugging Face for working with pre-trained models and NLP tasks.",
             "Integrating MLflow and Hugging Face into MLOps pipelines for efficient model deployment and monitoring."
           ]
-          }
-         ]
         }
-      ],
-
+      ]
+    },
     {
       "name": "Mechatronics and Mechanical Engineering",
       "level": "",
@@ -158,7 +157,8 @@
         "Instruction and assistance in programming courses, including Python.",
         "Teaching foundational courses on thermodynamics and heat transfer."
       ]
-    },
+    }
+  ],
   "languages": [
     {
       "language": "Finnish",
