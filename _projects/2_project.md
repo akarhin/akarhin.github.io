@@ -3,7 +3,7 @@ layout: page
 title: D-bot
 description: Implementation of machine-to-machine communication through an AGV.
 img: assets/img/m2m.jpg
-importance: 2
+importance: 3
 category: work
 giscus_comments: true
 ---
