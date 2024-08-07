@@ -15,5 +15,3 @@ Automation of condition monitoring (CM) systems has been gaining wide research i
 - Explainability: ML and DL solutions are often perceived as black boxes. This leads to decreased trust, or worse, unwarranted trust building towards these types of solutions.
 
 This works aims to answer one of these problems, Data scarcity, by leveraging a limited amount of fault samples in order to train a GAN generator to learn to "inject" fault modes into healthy vibration samples.
-
-{% endraw %}
