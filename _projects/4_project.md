@@ -16,6 +16,13 @@ Automation of condition monitoring (CM) systems has been gaining wide research i
 
 This works aims to answer one of these problems, Data scarcity, by leveraging a limited amount of fault samples in order to train a GAN generator to learn to "inject" fault modes into healthy vibration samples. This work has been completed as a Master's thesis, available at Aaltodoc or with personal request. The following is a discussion on the results and its significance scientifically.
 
+
+<div class="row justify-content-sm-center">
+  <div class="col-sm-8 mt-3 mt-md-0">
+    {% include figure.liquid path="gan_image.jpg" %}
+  </div>
+</div>
+
 ## Discussion
 
 The thesis explores the use of Generative Adversarial Networks (GANs) for fault diagnosis in rotating machines, specifically focusing on the generation of synthetic fault data to supplement limited measured data. This approach addresses a significant challenge in the domain of machine fault diagnosis: the scarcity of labeled fault data required for training deep learning models effectively. The discussion section of the thesis evaluates the scientific and practical impacts, highlights the uncertainties, and suggests directions for further research.
