@@ -1,10 +1,10 @@
 ---
 layout: page
-title: project 5
-description: a project with a background image
+title: Data-driven virtual sensor for powertrains based on transfer learning
+description: A summary of a journal paper
 img: assets/img/1.jpg
-importance: 3
-category: fun
+importance: 2
+category: work
 ---
 
 Every project has a beautiful feature showcase page.
