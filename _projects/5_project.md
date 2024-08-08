@@ -2,7 +2,7 @@
 layout: page
 title: Data-driven virtual sensor for powertrains based on transfer learning
 description: A summary of a journal paper
-img: assets/img/1.jpg
+img: assets/img/Virtual_sensor.jpg
 importance: 2
 category: work
 ---
