@@ -90,19 +90,22 @@ MSE is a traditional loss function that can be used to compare images when they 
 First, a federated averaging (FedAvg) approach was utilized. FedAvg is an extension of the traditional Stochastic Gradient Descent (SGD) algorithm, adapted for federated learning environments. In FedAvg, multiple clients (e.g., mobile devices) independently train their own models on local data and then periodically synchronize their models by averaging the updates:
 
 
-Let \( \nabla L_i(w) \) be the gradient of the loss function \( L_i \) computed by client \( i \) with respect to the global model parameters \( w \). The update rule in FedSGD can be expressed as:
+In FedAVG, each client performs several steps of stochastic gradient descent (SGD) on their local data before the global model parameters are updated. The update rule for FedAVG can be expressed as follows:
 
-$$
-w^{t+1} = w^t - \eta \cdot \frac{1}{N} \sum_{i=1}^{N} \nabla L_i(w^t)
-$$
+1. **Local Update:**
+   Each client \( i \) computes the updated model parameters \( w_i^{t+1} \) by performing \( E \) steps of SGD on their local data starting from the global model parameters \( w^t \):
+   $$
+   w_i^{t+1} = w^t - \eta \cdot \sum_{j=1}^{E} \nabla L_i(w^t)
+   $$
+   where \( \eta \) is the learning rate, \( E \) is the number of local epochs, and \( \nabla L_i(w^t) \) is the gradient of the loss function \( L_i \) with respect to the model parameters \( w^t \) at client \( i \).
 
-where \( \eta \) is the learning rate, and \( N \) is the number of clients.
+2. **Global Aggregation:**
+   The server aggregates the updated model parameters from all clients by taking a weighted average:
+   $$
+   w^{t+1} = \frac{1}{N} \sum_{i=1}^{N} w_i^{t+1}
+   $$
+   where \( N \) is the number of clients.
 
-<div class="row justify-content-sm-center">
-  <div class="col-sm-8 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/FedAVG.jpeg" %}
-  </div>
-</div>
 
 The FedAvg local models were optimised using the Adaptive Moment Estimation (Adam) version of the SGD optimizer. Adam optimizer consists of two gradient decent techniques: Root Mean Square Propagation (RMSP) and Momentum. Instead of utilizing a fixed learning rate, RMSP modifies the learning rate for each parameter individually based on the recent magnitudes of the gradients. This reduces oscillations and thus fastens convergence. Momentum accelerates the traditional gradient descent by adding weighted average of the gradients into the weigth updates. This allows the trained model to bypass possible local minima towards the wanted global minima. Adam is widely utilized and further information along with mathematical formulation can be found for example [here](https://www.geeksforgeeks.org/adam-optimizer/). 
 
@@ -120,7 +123,7 @@ where \( \eta \) is the learning rate, and \( N \) is the number of clients.
 
 <div class="row justify-content-sm-center">
   <div class="col-sm-8 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/FedSGD.jpeg" %}
+    {% include figure.liquid path="assets/img/FedSGD.jpg" %}
   </div>
 </div>
 
@@ -134,7 +137,7 @@ After 50 epochs, the average test set MSE for the FedAvg global node was found t
 
 <div class="row justify-content-sm-center">
   <div class="col-sm-8 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/Resultsjpg" %}
+    {% include figure.liquid path="assets/img/Results.jpg" %}
   </div>
 </div>
 
