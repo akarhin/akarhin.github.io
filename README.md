@@ -1,7 +1,5 @@
 # Github deployable portfolio modified for Aku T. Karhinen. Modified from the original al-folio available at https://github.com/alshedivat/al-folio.
 
-
-
 ## License
 
 The original theme is available as open source under the terms of the [MIT License](https://github.com/alshedivat/al-folio/blob/master/LICENSE).

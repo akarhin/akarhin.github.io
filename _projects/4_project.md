@@ -1,11 +1,12 @@
 ---
 layout: page
 title: fault injection with GANs
-description: 
+description:
 img: assets/img/gan_image.jpg
 importance: 1
 category: work
 ---
+
 ## Introduction
 
 Automation of condition monitoring (CM) systems has been gaining wide research interest. Specifically, data-driven intelligent fault diagnosis (IFD) solutions have gained popularity in the field. However, solutions based on machine learning (ML) and recently deep learning (DL) suffer from three significant problems which limit their use in industry:
@@ -15,7 +16,6 @@ Automation of condition monitoring (CM) systems has been gaining wide research i
 - Explainability: ML and DL solutions are often perceived as black boxes. This leads to decreased trust, or worse, unwarranted trust building towards these types of solutions.
 
 This works aims to answer one of these problems, Data scarcity, by leveraging a limited amount of fault samples in order to train a GAN generator to learn to "inject" fault modes into healthy vibration samples. This work has been completed as a Master's thesis, available at Aaltodoc or with personal request. The following is a discussion on the results and its significance scientifically.
-
 
 <div class="row justify-content-sm-center">
   <div class="col-sm-8 mt-3 mt-md-0">
@@ -74,8 +74,3 @@ The thesis suggests several avenues for further research:
 ## Conclusion
 
 The discussion section of my thesis highlights the significant scientific and practical contributions of using GANs for fault diagnosis in rotating machines. Despite some uncertainties, the research presents a promising approach to addressing the data scarcity issue in fault diagnosis, paving the way for more robust and reliable industrial applications. Further research in enhancing GAN techniques, exploring new architectures, and investigating practical applications is essential for advancing this field.
-
-
-
-
-

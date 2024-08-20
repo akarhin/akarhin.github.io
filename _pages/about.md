@@ -27,6 +27,7 @@ During my studies I worked as a Course Assistant on courses covering Thermodynam
 Passionate about advancing technology and engineering solutions, I am committed to leveraging my skills and knowledge to develop robust DL solutions that enhance condition monitoring practices for rotating machinery, ensuring reliability, efficiency, and safety in industrial applications.
 
 ### Professional interests
+
 - artificial intelligence
 - intelligent fault diagnosis
 - condition monitoring
@@ -38,4 +39,3 @@ Passionate about advancing technology and engineering solutions, I am committed 
 - transfer learning
 - rotating machinery
 - explainable AI
-

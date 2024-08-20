@@ -70,10 +70,7 @@
       "courses": [
         {
           "title": "ARotor lab",
-          "contents": [
-            "Rotating machinery",
-            "Mechatronics"
-          ]
+          "contents": ["Rotating machinery", "Mechatronics"]
         }
       ]
     }
@@ -180,11 +177,7 @@
     {
       "name": "Hobbies",
       "icon": "",
-      "keywords": [
-        "Climbing",
-        "Running",
-        "Writing"
-      ]
+      "keywords": ["Climbing", "Running", "Writing"]
     }
   ],
   "references": [],

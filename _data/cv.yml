@@ -19,7 +19,7 @@
         - title: ARotor lab
           contents:
             - Rotating machinery
-            - Mechatronics 
+            - Mechatronics
     - title: M.Sc
       institution: Aalto University, Espoo, Finland
       year: 2023
@@ -74,7 +74,7 @@
       items:
         - GPA 4.5/5.0
         - Synthesising Rotating Machine Faults into Vibration Data with Generative Adversarial Networks (Thesis), grade 5/5
-        
+
 - title: Academic Interests
   type: nested_list
   contents:
@@ -87,7 +87,6 @@
       items:
         - Research and development in the field of mechatronics, particularly within the ARotor laboratory.
         - Study of mechanical engineering principles applied to advanced mechatronic systems.
-
 
 - title: Other Interests
   type: list

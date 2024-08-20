@@ -6,7 +6,3 @@ img:
 importance: 4
 category: work
 ---
-
-
-
-

@@ -8,15 +8,11 @@ category: work
 related_publications: false
 ---
 
-
-
 ## Introduction
-
 
 While traditional condition monitoring (CM) done by vibration analysis is effective, it is not very scalable, requiring more well educated data analysts for accurate diagnosis. While the calulated features such as the RMS do alleviate this problem, reducing the vibration signature into specific features does not necessarily capture the entire distribution of faulty vibration behaviour. Therefore, the field of intelligent fault diagnosis (IFD) aims to automate CM with machine learning (ML) solutions. The aim is to produce intelligent models that take the vibration signature or a multitude of calculated features as their input and produce a health class as the output. The field has gained a lot of traction and many articles are published aiming to improve their use.
 
 This project explores the application of Machine Learning (ML) for gearbox fault diagnosis. The goal was to develop intelligent models that can accurately determine whether a gearbox is healthy or faulty based on processed vibration data from accelerometers. The comparison focuses on two traditional ML models: the Support Vector Machine (SVM) and the Multilayer Perceptron (MLP). First, traditional CM methods are introduced for comparison. Second, the beforementioned ML models are introduced. Third, the results are shown and a superior ML model is chosen based on perceived performance. Finally, the project concludes by discussing further improvements applicable.
-
 
 <div class="row justify-content-sm-center">
   <div class="col-sm-8 mt-3 mt-md-0">
@@ -30,17 +26,18 @@ The monitoring of rotating machines is often conducted with vibration analysis d
 
 Time-domain analysis can be conducted by directly comparing exctracted vibration signatures from a healthy and a faulty machine. Other forms of time-domain analysis include calculating features, such as the Root-mean square (RMS) value from the vibration signature and doing a similar comparison. By comparing their RMS values, one can determine which signal has greater overall energy or intensity, higher energy in similar operating conditions often signaling faulty behaviour. Features like this can be useful for the automation of CM systems, since raw time-domain analysis requires more finesse compared to the comparison of singular numerical features.
 
-Frequency-domain analysis transforms the vibration signature into frequency domain with a transformation operation such as the Fourier transform. One of the main reasons for using a frequency-domain representations is to simplify the processed signal into its frequency components, reducing the noise present in the signature. For rotating machinery, specific faults present themself in specific fault frequencies further elaborated below. Frequency representation makes finding these specific frequencies easier compared to time-domain analysis. 
+Frequency-domain analysis transforms the vibration signature into frequency domain with a transformation operation such as the Fourier transform. One of the main reasons for using a frequency-domain representations is to simplify the processed signal into its frequency components, reducing the noise present in the signature. For rotating machinery, specific faults present themself in specific fault frequencies further elaborated below. Frequency representation makes finding these specific frequencies easier compared to time-domain analysis.
 
-Some faults are strongly present in the harmonic frequencies, or integer multiples of specific fault frequencies. Envelope analysis aims to examine the high frequency components present in the vibration signature. One form of envelope analysis involves taking a Hilbert transformation of the raw measurement, extracting the envelope by taking the absolute value from the analytical signal, transforming the resulting signal into the order domain (1 order = 1 x Rpm in Hz) and then calculating the power spectral density (PSD) in the order domain. From the PSD, known fault frequencies related to the rotating speed of the system can be examined to determine if a fault mode corresponding to specific fault frequencies is present. 
+Some faults are strongly present in the harmonic frequencies, or integer multiples of specific fault frequencies. Envelope analysis aims to examine the high frequency components present in the vibration signature. One form of envelope analysis involves taking a Hilbert transformation of the raw measurement, extracting the envelope by taking the absolute value from the analytical signal, transforming the resulting signal into the order domain (1 order = 1 x Rpm in Hz) and then calculating the power spectral density (PSD) in the order domain. From the PSD, known fault frequencies related to the rotating speed of the system can be examined to determine if a fault mode corresponding to specific fault frequencies is present.
 
 The main characteristic fault frequencies in gears include the Gear mesh frequency (GMF), sidebands, and harmonics. **GMF** is the frequency at which gear teeth mesh together. It is a fundamental frequency in the vibration signal of a gearbox and is used to detect gear faults. It is calculated with the following equation:
 
 $$
- \text{GMF} = N \times f_s 
+ \text{GMF} = N \times f_s
 $$
 
 where:
+
 - \( N \) is the number of teeth on the gear
 - \( f_s \) is the shaft rotational frequency (in Hz)
 
@@ -51,17 +48,18 @@ $$
 $$
 
 where:
+
 - \( k \) is an integer (1, 2, 3, ...)
 - \( f_s \) is the shaft rotational frequency (in Hz)
-
 
 **Harmonics** of the GMF are integer multiples of the GMF. The presence of harmonics and their relative amplitudes can provide information about the severity and type of gear faults present. Harmonics of the GMF are calculated with:
 
 $$
-\text{Harmonics} = m \times \text{GMF} 
+\text{Harmonics} = m \times \text{GMF}
 $$
 
 where:
+
 - \( m \) is an integer (1, 2, 3, ...)
 
 **The hunting thooth frequency** (HTF) is the rate at which a tooth in one gear engages with a specific tooth in another gear. HTF can be used to determine faults occuring at a specific thooth. It is calculated with:
@@ -69,7 +67,9 @@ where:
 $$
 HTF = \frac{\text{GMF} \times N_a}{T_{out} \times T_{in}}
 $$
+
 where:
+
 - GMF is the gear meshing frequency
 - N_a is the common frequency
 - T_in = pinion teeth
@@ -80,46 +80,51 @@ The common frequency is determined by dividing the amount of theeth from both ge
 The following section explains some common fault modes and their effect on the specific fault frequencies and the vibration signature in the frequency domain.
 
 ### Misalignment
+
 - **Symptoms:** Amplitude increase in the axial direction of the axes. Appearance of 2X, 3X RPM, and 2X, 3X GMF.
 - **Causes:** Wrong alignment procedures, loss of tolerances, thermal expansion.
 
 ### Excessive Wear
+
 - **Symptoms:** Increased amplitude of the 1XGMF and 1X sidebands. Appearance of gear's natural frequency.
 - **Causes:** Improper lubrication, contaminated or degraded lubricant. Change of wear pattern. Assembly and adjustment failures.
 
 ### Excessive Backlash
+
 - **Symptoms:** Increased amplitude of the 1XGMF and 1X sidebands. Appearance of gear's natural frequency.
 - **Causes:** Bad assembly, design or manufacturing flaws, wear.
 
 ### Overload
+
 - **Symptoms:** Increased amplitude of 1XGMF, multiple 1X RPM sidebands.
 - **Causes:** Operation outside of design conditions.
 
 ### High Friction
+
 - **Symptoms:** Increase of the 1XGMF component, rise of the global amplitude in acceleration, and shock pulse.
 - **Causes:** Lubrication failures and/or lubricant quality. Component assembly and tolerances.
 
 ### Broken Teeth
+
 - **Symptoms:** Synchronous impact pattern in the time waveform with 1X of damaged gear.
 - **Causes:** Overload, fatigue, adjustments and tolerances.
 
 ### Assembly or Manufacturing Failures
+
 - **Symptoms:** Increased amplitude of the 1XGMF and 1X sidebands. Appearance of Hunting Tooth Frequency (HFT) or the Gear Assembly Phase Frequency (GAPF).
 - **Causes:** Manufacturing defects in geometry and/or materials. Irregular teeth surface. Changes from the original wear pattern.
 
 ## The Nyquist frequency
 
-During the data gathering process, something called the Nyquist frequency is often discussed. The Nyquist frequency corresponds to the frequency thats cycle length is half of the samplers frequency. Therefore, for example, a sampling rate of 3 kHz has a Nyquist frequency of 1.5 kHz. Conversely, a frequency of 1.5 kHz has a Nyquist rate of 3 kHz. The Nyquist rate is used to mimimize the effect of aliasing during data acquisition. It is stated that to avoid aliasing, the Nyquist rate of the phenomena monitored has to be smaller or at least equal to the sampling rate. That is, if we want to monitor high frequency phenomena, the sampling frequency has to be at least double the monitored phenomenas frequency, in order to avoid aliasing in the signal. 
-
+During the data gathering process, something called the Nyquist frequency is often discussed. The Nyquist frequency corresponds to the frequency thats cycle length is half of the samplers frequency. Therefore, for example, a sampling rate of 3 kHz has a Nyquist frequency of 1.5 kHz. Conversely, a frequency of 1.5 kHz has a Nyquist rate of 3 kHz. The Nyquist rate is used to mimimize the effect of aliasing during data acquisition. It is stated that to avoid aliasing, the Nyquist rate of the phenomena monitored has to be smaller or at least equal to the sampling rate. That is, if we want to monitor high frequency phenomena, the sampling frequency has to be at least double the monitored phenomenas frequency, in order to avoid aliasing in the signal.
 
 ## Dataset Description:
 
 Sourced from Kaggle, the dataset includes vibration data from four accelerometers placed on a gearbox under different loads. It contains 20 files: 10 for healthy gearboxes and 10 for gearboxes with a broken tooth, each under different load conditions (0% - 90%). The four vibration sensors placed in four different direction, and under variation of load from '0' to '90' percent. Data points were created by segmenting each file into 3000 measurement point sized windows and labeled. Measurement point corresponds to a singluar measurement taken with each 4 accelerometers at the same point in time. Each file had an unique amount of measurement points. Therefore, the first 80 000 sample points were used from each file to balance the dataset. This leads 400 datapoints overall, 200 from a healthy gearbox and 200 from a faulty machine.
 
-
 Fast Fourier Transform (FFT) was applied to reduce noise and enhance signal features. From the FFT results, the absolute values were taken due to the limitations of the ML model structures not being able to process imaginary parts of the FFT output. Data was randomly split into training (70%) and test (30%) sets, while making sure each set had the same amount of healthy and faulty data points. Scikit-learns cross_val_score was utilized, therefore requiring no seperate validation set.
 
-The dataset is publicly available (you need a Kaggle account) [here]( https://www.kaggle.com/datasets/brjapon/gearbox-fault-diagnosis). The SpectraQuest Gearbox Prognostic Simulator test setup has been introduced [here](https://spectraquest.com/prognostics/details/gps/).
+The dataset is publicly available (you need a Kaggle account) [here](https://www.kaggle.com/datasets/brjapon/gearbox-fault-diagnosis). The SpectraQuest Gearbox Prognostic Simulator test setup has been introduced [here](https://spectraquest.com/prognostics/details/gps/).
 
 <div class="row justify-content-sm-center">
   <div class="col-sm-8 mt-3 mt-md-0">
@@ -128,10 +133,8 @@ The dataset is publicly available (you need a Kaggle account) [here]( https://ww
   </div>
 </div>
 
-
-
-
 ## The MLP:
+
 A Multilayer Perceptron (MLP) is a type of artificial neural network used primarily for supervised learning tasks like classification and regression. The structure of an MLP consists of an input layer, one or more hidden layers, and an output layer. Each layer is composed of neurons, where each neuron in one layer is connected to every neuron in the next layer, forming a fully connected feedforward network. The MLP structure was chosen, since it is considered to be the default, most simple neural network structure.
 
 <div class="row justify-content-sm-center">
@@ -141,7 +144,7 @@ A Multilayer Perceptron (MLP) is a type of artificial neural network used primar
   </div>
 </div>
 
-In a MLP, the input layer (Some think that the input layer does not exist due to it not having any calculations. However, the term "input layer" is still widely used, therefore its use also in this project.)  receives the raw data, which is then processed through the hidden layers. These hidden layers are responsible for learning and extracting features from the data through weighted connections and activation functions, which introduce non-linearity into the model, enabling it to learn complex patterns.
+In a MLP, the input layer (Some think that the input layer does not exist due to it not having any calculations. However, the term "input layer" is still widely used, therefore its use also in this project.) receives the raw data, which is then processed through the hidden layers. These hidden layers are responsible for learning and extracting features from the data through weighted connections and activation functions, which introduce non-linearity into the model, enabling it to learn complex patterns.
 
 <div class="row justify-content-sm-center">
   <div class="col-sm-8 mt-3 mt-md-0">
@@ -166,9 +169,8 @@ $$
 \text{Logistic Loss}(y, \hat{y}) = - \left[ y \log(\hat{y}) + (1 - y) \log(1 - \hat{y}) \right]
 $$
 
-
-
 ## The SVM:
+
 A Support Vector Machine (SVM) is a supervised learning algorithm used primarily for classification and regression tasks. The main goal of an SVM is to find the optimal hyperplane that best separates the data points of different classes in a high-dimensional space.
 
 <div class="row justify-content-sm-center">
@@ -195,15 +197,13 @@ $$ S(x) = \frac{e^x}{e^x + 1} $$
 
 The used loss function for the SVM was the Hinge loss:
 
-
 $$
 \text{Loss}((x, y), h) := \max\left(0, 1 - y \cdot h(x)\right) + \lambda \|w\|
 $$
 
-
-
 ## Results
-Both models performed perfectly on preprocessed data, achieving a test accuracy of 1.00 and perfect cross-validation scores. However, when evaluated on raw data, SVM outperformed MLP with a test accuracy of 0.4417 and validation accuracy of 0.59, compared to MLP's test accuracy of 0.3917 and validation accuracy of 0.54. Despite this, both models' raw data performance was below random guessing, highlighting the importance of data preprocessing when implementing traditional ML models for intelligent CM. 
+
+Both models performed perfectly on preprocessed data, achieving a test accuracy of 1.00 and perfect cross-validation scores. However, when evaluated on raw data, SVM outperformed MLP with a test accuracy of 0.4417 and validation accuracy of 0.59, compared to MLP's test accuracy of 0.3917 and validation accuracy of 0.54. Despite this, both models' raw data performance was below random guessing, highlighting the importance of data preprocessing when implementing traditional ML models for intelligent CM.
 
 <div class="row justify-content-sm-center">
   <div class="col-sm-8 mt-3 mt-md-0">
@@ -219,12 +219,12 @@ Both models performed perfectly on preprocessed data, achieving a test accuracy 
   </div>
 </div>
 
-
 ## Conclusion
-This project successfully demonstrated the potential of ML models in mechanical engineering diagnostics. It functions as a good starting point for any mechanical engineering student who is interested in intelligent fault diagnosis, or wants to learn basic ML techniques applicable to mechanical engineering problems. 
 
+This project successfully demonstrated the potential of ML models in mechanical engineering diagnostics. It functions as a good starting point for any mechanical engineering student who is interested in intelligent fault diagnosis, or wants to learn basic ML techniques applicable to mechanical engineering problems.
 
 ## Things to improve
+
 Here are some things that anyone wanting to replicate this project can take into account and improve:
 
 - A proper, structured hyperparameter search
@@ -232,4 +232,3 @@ Here are some things that anyone wanting to replicate this project can take into
 - Further comparisons of loss functions/activation functions/ model structures
 - Better visualization of the results
 - Further ablation of the results
-
