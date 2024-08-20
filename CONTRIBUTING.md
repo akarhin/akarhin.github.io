@@ -20,6 +20,10 @@ Before submitting an issue, please make sure:
 
 When submitting an issue, please make sure to use the appropriate template.
 
+Testing git push
+
+
+
 ## License
 
 By contributing to al-folio, you agree that your contributions will be licensed
