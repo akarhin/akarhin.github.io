@@ -33,7 +33,7 @@ The data used to train the presented virtual sensor was created with a lumped-ma
 
 <div class="row justify-content-sm-center">
   <div class="col-sm-8 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/lumped_page-0001.jpg" style="width:100%" %}
+    {% include figure.liquid path="assets/img/lumped_page-0001.jpg" style="width:130%" %}
   </div>
 </div>
 
