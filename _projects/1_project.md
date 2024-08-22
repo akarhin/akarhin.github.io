@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Gearbox fault diagnosis
+title: ML-based gearbox fault diagnosis
 description: An entry-level intelligent fault diagnosis project
 img: assets/img/gearbox.jpg
 importance: 3
