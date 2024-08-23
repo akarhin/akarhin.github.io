@@ -19,7 +19,41 @@ This works aims to answer one of these problems, Data scarcity, by leveraging a 
 
 <div class="row justify-content-sm-center">
   <div class="col-sm-8 mt-3 mt-md-0">
-    {% include figure.liquid path="gan_image.jpg" %}
+    {% include figure.liquid path="assets/img/gan_image.jpg" %}
+  </div>
+</div>
+
+## Data description
+
+The data for this study originated from a compact maritime thruster testing platform. The primary feature of this test bench was to ensure that its fundamental frequencies closely matched those of the full-scale thruster.
+
+<div class="row justify-content-sm-center">
+  <div class="col-sm-8 mt-3 mt-md-0">
+    {% include figure.liquid path="assets/img/thesis_data.jpg" %}
+  </div>
+</div>
+
+## GAN and IFD architectures
+
+
+## General setting
+
+<div class="row justify-content-sm-center">
+  <div class="col-sm-8 mt-3 mt-md-0">
+    {% include figure.liquid path="assets/img/General_setting.jpg" %}
+  </div>
+</div>
+
+## Results
+
+<div class="row justify-content-sm-center">
+  <div class="col-sm-8 mt-3 mt-md-0">
+    {% include figure.liquid path="assets/img/Qualitative_res.jpg" %}
+  </div>
+</div>
+<div class="row justify-content-sm-center">
+  <div class="col-sm-8 mt-3 mt-md-0">
+    {% include figure.liquid path="assets/img/Quantitative_res.jpg" %}
   </div>
 </div>
 
@@ -41,7 +75,7 @@ The thesis presents several novel contributions to the field of GAN-based fault 
 
 ### Practical Impact
 
-The practical implications of this research are profound:
+The practical implications of this thesis are the following:
 
 1. **Enhanced Data Availability**: By generating synthetic fault samples, GANs can supplement real measured data, balancing datasets and improving the training of deep learning models for fault diagnosis. This is especially beneficial for faults that are difficult to measure or rare in occurrence.
 
@@ -73,4 +107,4 @@ The thesis suggests several avenues for further research:
 
 ## Conclusion
 
-The discussion section of my thesis highlights the significant scientific and practical contributions of using GANs for fault diagnosis in rotating machines. Despite some uncertainties, the research presents a promising approach to addressing the data scarcity issue in fault diagnosis, paving the way for more robust and reliable industrial applications. Further research in enhancing GAN techniques, exploring new architectures, and investigating practical applications is essential for advancing this field.
+The discussion section of the thesis highlights the significant scientific and practical contributions of using GANs for fault diagnosis in rotating machines. Despite some uncertainties, the research presents a promising approach to addressing the data scarcity issue in fault diagnosis, paving the way for more robust and reliable industrial applications. Further research in enhancing GAN techniques, exploring new architectures, and investigating practical applications is essential for advancing this field.
