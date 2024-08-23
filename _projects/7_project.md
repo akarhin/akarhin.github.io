@@ -7,3 +7,4 @@ importance: 3
 category: fun
 ---
 
+This page summarizes all the projects implemented on Raspberry Pi 5.
