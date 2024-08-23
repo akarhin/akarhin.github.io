@@ -1,7 +1,7 @@
 ---
 layout: page
 title: fault injection with GANs
-description:
+description: Thesis summary
 img: assets/img/gan_image.jpg
 importance: 1
 category: work
