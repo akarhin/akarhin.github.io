@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Raspberry pi implementations
+title: Development on a Raspberry pi
 description: A short collection of fun projects.
 img: assets/img/raspberrypi.jpg
 importance: 3
