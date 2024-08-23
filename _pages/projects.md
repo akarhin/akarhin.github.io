@@ -2,7 +2,7 @@
 layout: page
 title: projects
 permalink: /projects/
-description: A short collection of project summarries.
+description: A collection of interesting projects. Projects are labeled as either "work" or "fun". Work corresponds to topics studied in my PhD and fun to topics outside of it.
 nav: true
 nav_order: 3
 display_categories: [work, fun]
