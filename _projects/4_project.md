@@ -25,8 +25,8 @@ This works aims to answer one of these problems, Data scarcity, by leveraging a 
 
 ## Data description
 
-The data for this study originated from a compact maritime thruster testing platform. The primary feature of this test bench was to ensure that its fundamental frequencies closely matched those of the full-scale thruster.
-
+The data for this study originated from a compact maritime thruster testing platform. The primary feature of this test bench was to ensure that its fundamental frequencies closely matched those of the full-scale thruster. In order to create artificial faults into the test bench measurement data, thin metal sheets (shims) were glued into the pinion gear of the thrusters gearbox. It is to note that this fault is highly artificial and does not imitate any reasonable fault possible in a bevel gear: it is purely to create separate vibration profiles for multiclass fault diagnosis.
+Below image showcases the test bench and all the properties that created the dataset. The utilized measurement was torsional vibration measured by a strain gage-based torque transducer. 
 <div class="row justify-content-sm-center">
   <div class="col-sm-8 mt-3 mt-md-0">
     {% include figure.liquid path="assets/img/thesis_data.jpg" %}
