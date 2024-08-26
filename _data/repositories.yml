@@ -3,3 +3,10 @@ github_users:
 
 github_repos:
   - akarhin.github.io
+  
+gitlab_users:
+  - karhina1
+
+gitlab_repos:
+  - project1
+  - project2
