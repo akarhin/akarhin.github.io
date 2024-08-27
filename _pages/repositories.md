@@ -17,6 +17,8 @@ nav_order: 4
   {% endfor %}
 </div>
 
+{% endif %}
+
 ---
 
 {% if site.repo_trophies.enabled %}
@@ -79,5 +81,5 @@ nav_order: 4
     {% include repository/repo.liquid repository=repo platform="gitlab" %}
   {% endfor %}
 </div>
-
+{% endif %}
 
