@@ -17,7 +17,7 @@ nav_order: 4
   {% endfor %}
 </div>
 
-{% endif %}
+
 
 ---
 
@@ -34,6 +34,7 @@ nav_order: 4
 ---
 
 {% endfor %}
+{% endif %}
 {% endif %}
 {% endif %}
 
