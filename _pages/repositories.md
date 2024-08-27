@@ -35,7 +35,7 @@ nav_order: 4
 
 {% endfor %}
 {% endif %}
-{% endif %}
+
 {% endif %}
 
 ## GitHub Repositories
