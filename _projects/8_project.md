@@ -1,10 +1,10 @@
 ---
 layout: page
-title: Domain Adversarial neural network
+title: Domain Adaptation for engine condition monitoring
 description: Sim2Real domain adaptation
-img: assets/img/raspberrypi.jpg
+img: assets/img/Domain_adaptation_engines.jpg
 importance: 5
 category: work
 ---
 
-This page summarizes all the projects implemented on Raspberry Pi 5.
+TODO
