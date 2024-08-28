@@ -7,6 +7,8 @@ importance: 4
 category: work
 ---
 
+TODO: Python implementations on the AGFD Dataset
+
 This page gives general insight into vibration based condition monitoring techniques. The term "traditional" refers to non-data-driven techniques (ML,DL...) utilized prior intelligent fault diagnosis (IFD) techniques (Most of these techniques are still in use in industry due to major problems present in IFD models, more information about these problems [here] (//). Traditional vibration based CM can be categorized into several approaches some of which are introduced in this page, along with their shortcomings.
 
 ## Introduction
