@@ -2,7 +2,7 @@
 layout: page
 title: Torque estimation in maritime propulsion systems with physics-informed deep learning
 description: Hybrid aproach to torque estimation
-img: assets/img/Domain_adaptation_engines.jpg
+img: assets/img/torque_estimation_image.webp
 importance: 6
 category: work
 ---
