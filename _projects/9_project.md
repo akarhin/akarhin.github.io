@@ -1,12 +1,9 @@
 ---
 layout: page
 title: Torque estimation in maritime propulsion systems with physics-informed deep learning
-
-![image](https://github.com/user-attachments/assets/126db9d4-a2c3-480b-bd79-a495e71c7d92)
-
-description: Sim2Real domain adaptation
+description: Hybrid aproach to torque estimation
 img: assets/img/Domain_adaptation_engines.jpg
-importance: 5
+importance: 6
 category: work
 ---
 
