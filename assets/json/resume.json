@@ -5,7 +5,7 @@
     "image": "",
     "email": "aku.karhinen@aalto.fi",
     "phone": "",
-    "url": "https://aku.karhinen.io",
+    "url": "https://akarhin.github.io/",
     "summary": "Doctoral researcher at Aalto University focusing on vibration analysis and deep learning for rotating machinery condition monitoring.",
     "location": {
       "address": "",
@@ -17,13 +17,12 @@
     "profiles": [
       {
         "network": "LinkedIn",
-        "username": "AkuKarhinen",
-        "url": "https://www.linkedin.com/in/akukarhinen"
+        "url": "https://www.linkedin.com/in/aku-karhinen-1171331aa/"
       },
       {
         "network": "GitHub",
-        "username": "AkuKarhinen",
-        "url": "https://github.com/AkuKarhinen"
+        "username": "akarhin",
+        "url": "https://github.com/akarhin"
       }
     ]
   },
@@ -32,11 +31,12 @@
       "name": "Aalto University",
       "position": "Doctoral Researcher",
       "url": "https://www.aalto.fi",
-      "startDate": "2024-01-01",
+      "startDate": "2024",
       "endDate": "",
       "summary": "Part of the ARotor laboratory in the Mechatronics research group, focusing on deep learning and vibration analysis for rotating machinery.",
       "highlights": [
         "Developed deep-learning models for fault detection",
+        "Developed virtual sensing methodologies for ship thruster powertrain",
         "Designed and implemented vibration data acquisition pipelines"
       ]
     },
@@ -44,21 +44,21 @@
       "name": "Aalto University",
       "position": "Research Assistant",
       "url": "https://www.aalto.fi",
-      "startDate": "2022-01-01",
-      "endDate": "2024-01-01",
+      "startDate": "2022",
+      "endDate": "2024",
       "summary": "Supported research in the ARotor lab on mechatronics and condition monitoring.",
       "highlights": [
         "Co-authored conference papers",
-        "Maintained lab instrumentation and datasets"
+        "Processed datasets and developed techniques for intelligent fault diagnosis"
       ]
     },
     {
       "name": "Aalto University",
       "position": "Course Assistant",
       "url": "https://www.aalto.fi",
-      "startDate": "2021-01-01",
-      "endDate": "2022-01-01",
-      "summary": "Assisted teaching and grading for undergraduate courses.",
+      "startDate": "2021",
+      "endDate": "2022",
+      "summary": "Assisted teaching and grading for several undergraduate courses.",
       "highlights": [
         "Thermodynamics and Heat Transfer",
         "Basic Programming I (Python)",
@@ -73,8 +73,8 @@
       "url": "https://www.aalto.fi",
       "area": "Mechatronics",
       "studyType": "PhD",
-      "startDate": "2020-09-01",
-      "endDate": "2024-06-01",
+      "startDate": "2024",
+      "endDate": "1",
       "score": "",
       "courses": [
         "Vibration Based Condition Monitoring",
@@ -87,26 +87,55 @@
       "url": "https://www.aalto.fi",
       "area": "Mechanical Engineering",
       "studyType": "M.Sc",
-      "startDate": "2021-09-01",
-      "endDate": "2023-06-01",
+      "startDate": "2022",
+      "endDate": "2023",
       "score": "",
       "courses": [
         "Machine Learning and Data Science",
-        "Advanced Mechatronics"
+        "Advanced Mechatronics",
+        
+      ]
+    },
+    {
+      "institution": "Aalto University",
+      "location": "Espoo, Finland",
+      "url": "https://www.aalto.fi",
+      "area": "Mechanical and Structural Engineering",
+      "studyType": "B.Sc",
+      "startDate": "2019",
+      "endDate": "2022",
+      "score": "",
+      "courses": [
+        "Statics, Dynamics, Fluid Mechanics, Thermodynamics",
+        "Minor in Computer Science"
       ]
     }
   ],
-  "awards": [
+  "awards and grants": [
+    {
+      "title": "Personal grant",
+      "date": "2025",
+      "awarder": "Merenkulun säätiö",
+      "url": "",
+      "summary": "Research grant awarded for doctoral studies related to maritime industry."
+    },
+    {
+      "title": "Personal grant",
+      "date": "2025",
+      "awarder": "Walter Ahlström foundation",
+      "url": "",
+      "summary": "Research grant awarded for doctoral studies related to finnish industry."
+    },
     {
       "title": "Yrjö and Senja Koivunen Foundation Grant",
-      "date": "2023-10-01",
+      "date": "2023",
       "awarder": "Yrjö and Senja Koivunen Foundation",
       "url": "",
       "summary": "Research grant awarded for doctoral studies in vibration analysis."
     },
     {
       "title": "Dean's List",
-      "date": "2023-06-01",
+      "date": "2023",
       "awarder": "Aalto University",
       "url": "",
       "summary": "Awarded for completing 60 credits in one academic year with a GPA ≥ 4.0."
@@ -186,7 +215,7 @@
     },
     {
       "language": "Swedish",
-      "fluency": "Fluent",
+      "fluency": "B2",
       "icon": ""
     }
   ],
@@ -212,7 +241,12 @@
   ],
   "references": [
     {
-      "name": "Prof. Jesse Miettinen",
+      "name": "Ass Prof. Raine Viitala",
+      "icon": "fa-solid fa-user",
+      "reference": "Thesis supervisor, ARotor Lab, Aalto University."
+    },
+    {
+      "name": "Dr. Jesse Miettinen",
       "icon": "fa-solid fa-user",
       "reference": "Supervisor, ARotor Lab, Aalto University – oversaw doctoral research in vibration analysis."
     },
@@ -230,7 +264,7 @@
         "Deep-learning model implementations",
         "Data acquisition and preprocessing scripts"
       ],
-      "startDate": "2022-01-01",
+      "startDate": "2022",
       "endDate": "",
       "url": "https://github.com/AkuKarhinen/ARotor"
     }
