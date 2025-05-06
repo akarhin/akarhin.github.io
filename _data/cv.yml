@@ -35,19 +35,17 @@
       institution: Aalto University, Espoo, Uusimaa, Finland
       year: 2024
       description:
-        - Part of the ARotor laboratory in the Mechatronics research group.
+        - Part of the ARotor laboratory in the Mechatronics research group
         - Deep Learning and Vibration Analysis
-
     - title: Research Assistant
       institution: Aalto University, Espoo, Uusimaa, Finland
-      year: 2022-2024
+      year: 2022 - 2024
       description:
         - Department of Mechanical Engineering, Mechatronics research group, ARotor lab
-
     - title: Course Assistant
       institution: Aalto University, Espoo, Uusimaa, Finland
-      year: 2021-2022
-      description: Courses
+      year: 2021 - 2022
+      description:
         - Thermodynamics and Heat transfer
         - Basic course on programming 1 (Python)
         - Basic course on programming 2 (Python)
@@ -57,7 +55,7 @@
   contents:
     - title: Coursera MLOps Specialization Certificate
       year: 2024
-      description: Completed the following courses
+      description:
         - Python Essentials for MLOps
         - DevOps, DataOps, MLOps
         - MLOps Platforms, Amazon SageMaker and Azure ML
@@ -80,13 +78,12 @@
   contents:
     - title: Deep Learning and Vibration Analysis
       items:
-        - Application of deep learning techniques to analyze and synthesize vibration data.
-        - Research on fault detection in rotating machinery using deep learning and machine learning.
-
+        - Application of deep learning techniques to analyze and synthesize vibration data
+        - Research on fault detection in rotating machinery using deep learning and machine learning
     - title: Mechatronics and Mechanical Engineering
       items:
-        - Research and development in the field of mechatronics, particularly within the ARotor laboratory.
-        - Study of mechanical engineering principles applied to advanced mechatronic systems.
+        - Research and development in the field of mechatronics, particularly within the ARotor laboratory
+        - Study of mechanical engineering principles applied to advanced mechatronic systems
 
 - title: Other Interests
   type: list
