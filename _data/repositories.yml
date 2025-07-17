@@ -3,6 +3,7 @@ github_users:
 
 github_repos:
   - /akarhin/akarhin.github.io
+  - ../Aalto-Arotor/openConMo
   
 gitlab_users:
   - karhina1
