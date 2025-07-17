@@ -45,18 +45,13 @@ nav_order: 4
 
 ---
 ## GitLab Repositories
-{% if site.repo_trophies.enabled %}
-{% for user in site.data.repositories.gitlab_users %}
-{% if site.data.repositories.gitlab_users.size > 1 %}
-  <h4>{{ user }}</h4>
-{% endif %}
-  <div class="repositories d-flex flex-wrap flex-md-row flex-column justify-content-between align-items-center">
-    {% include repository/repo_trophies.liquid username=user platform="gitlab" %}
+
+{% if site.data.repositories.gitlab_repos %}
+  <div class="repositories">
+    {% for repo in site.data.repositories.gitlab_repos %}
+      <p><a href="{{ repo.url }}" target="_blank" rel="noopener">{{ repo.name }}</a></p>
+    {% endfor %}
   </div>
-
-
-{% endfor %}
-{% endif %}
 {% endif %}
 
 
