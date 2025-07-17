@@ -11,5 +11,7 @@ gitlab_users:
   - https://version.aalto.fi/gitlab/karhina1
 
 gitlab_repos:
-  - https://version.aalto.fi/gitlab/karhina1/VIRM_2025_submission_code
-  - https://version.aalto.fi/gitlab/hamalaa14/wartsila-fault-diagnosis
+  - name: VIRM 2025 submission code
+    url: https://version.aalto.fi/gitlab/karhina1/VIRM_2025_submission_code
+  - name: Data-Driven Torsional Vibration-Based Fault Diagnosis of Large Internal Combustion Engines Without Real Fault Data
+    url: https://version.aalto.fi/gitlab/hamalaa14/wartsila-fault-diagnosis
