@@ -32,6 +32,7 @@ nav_order: 4
 </div>
 {% endif %}
 
+---
 ## GitLab Users
 
 {% if site.data.repositories.gitlab_users %}
