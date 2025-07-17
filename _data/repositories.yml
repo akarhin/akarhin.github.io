@@ -9,5 +9,5 @@ gitlab_users:
   - https://version.aalto.fi/gitlab/karhina1
 
 gitlab_repos:
-  - project1
-  - project2
+  - https://version.aalto.fi/gitlab/karhina1/VIRM_2025_submission_code
+  - https://version.aalto.fi/gitlab/hamalaa14/wartsila-fault-diagnosis
