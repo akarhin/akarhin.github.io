@@ -5,7 +5,7 @@ github_repos:
   - name: This site
     url: https://github.com/akarhin/akarhin.github.io
   - name: openConMo
-    url: https://github.com//Aalto-Arotor/openConMo
+    url: https://github.com/Aalto-Arotor/openConMo
   
 gitlab_users:
   - https://version.aalto.fi/gitlab/karhina1
