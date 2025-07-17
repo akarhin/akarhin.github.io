@@ -2,11 +2,11 @@ github_users:
   - akarhin
 
 github_repos:
-  - /akarhin/akarhin.github.io
-  - ../Aalto-Arotor/openConMo
+  - https://github.com/akarhin/akarhin.github.io
+  - https://github.com//Aalto-Arotor/openConMo
   
 gitlab_users:
-  - ../https://version.aalto.fi/gitlab/karhina1
+  - https://version.aalto.fi/gitlab/karhina1
 
 gitlab_repos:
   - project1
