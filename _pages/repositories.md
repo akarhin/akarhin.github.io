@@ -38,7 +38,7 @@ nav_order: 4
 {% if site.data.repositories.gitlab_users %}
   <div class="repositories">
     {% for user in site.data.repositories.gitlab_users %}
-      <p><a href="https://gitlab.com/{{ user }}" target="_blank" rel="noopener">{{ user }}</a></p>
+      <p><a href="{{ user }}" target="_blank" rel="noopener">{{ user }}</a></p>
     {% endfor %}
   </div>
 {% endif %}
