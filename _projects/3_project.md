@@ -118,7 +118,7 @@ where \( \eta \) is the learning rate, and \( N \) is the number of clients.
   </div>
 </div>
 
-Further information regarding federated learning, GTVMin, FedAvg or FedSGD can be found [here](https://github.com/alexjungaalto/FederatedLearning/blob/main/material/FL_LectureNotes.pdf).
+Further information regarding federated learning, GTVMin, FedAvg or FedSGD can be found [here](https://github.com/alexjungaalto/FederatedLearning/tree/main).
 
 ## Results
 
