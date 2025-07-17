@@ -6,7 +6,7 @@ github_repos:
   - ../Aalto-Arotor/openConMo
   
 gitlab_users:
-  - karhina1
+  - ../https://version.aalto.fi/gitlab/karhina1
 
 gitlab_repos:
   - project1
