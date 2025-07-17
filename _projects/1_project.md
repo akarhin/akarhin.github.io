@@ -124,7 +124,7 @@ Sourced from Kaggle, the dataset includes vibration data from four accelerometer
 
 Fast Fourier Transform (FFT) was applied to reduce noise and enhance signal features. From the FFT results, the absolute values were taken due to the limitations of the ML model structures not being able to process imaginary parts of the FFT output. Data was randomly split into training (70%) and test (30%) sets, while making sure each set had the same amount of healthy and faulty data points. Scikit-learns cross_val_score was utilized, therefore requiring no seperate validation set.
 
-The dataset is publicly available (you need a Kaggle account) [here](https://www.kaggle.com/datasets/brjapon/gearbox-fault-diagnosis). The SpectraQuest Gearbox Prognostic Simulator test setup has been introduced [here](https://spectraquest.com/prognostics/details/gps/).
+The dataset is publicly available (you need a Kaggle account) [here](https://www.kaggle.com/datasets/brjapon/gearbox-fault-diagnosis). The SpectraQuest Gearbox Prognostic Simulator test setup has been introduced [here](https://spectraquest.com/gearbox-prognostics-simulator/).
 
 <div class="row justify-content-sm-center">
   <div class="col-sm-8 mt-3 mt-md-0">
